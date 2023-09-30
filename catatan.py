@@ -106,4 +106,141 @@ x['nama'] = "Ghost Axel" #buat ganti data
 #-> dictionary = dict([[key,value], [key2,value2]]) => {key: value, key2: value2}
 
 
+#----transformasi string
+#str -> string ("axel".method())
+#str.upper() -> jadi uppercase
+#str.lower() -> jadi lowercase
+#str.rstrip() -> hapus whitespace di kanan string
+#str.lstrip() -> hapus whitespace di kiri string
+#str.strip() -> hapus whitespace di awal dan akhir string
+#str.strip("code") -> hapus kata "code" di string
+#str.startswith('Meltryllis') -> cek apakah string dimulai dengan 'Meltryllis'
+#str.endswith('Meltryllis') -> cek apakah string diakhiri dengan 'Meltryllis'
+#str.join() -> join banyak string jadi 1 => print(" ".join(["aku","punya","ini"])) print("123".join(["aku","punya","ini"])) " " adalah delimiter
+#str.split() -> buat memisahkan string jadi list => print("aku punya ini".split()) -> ["aku","punya","ini"]
+#str.split('\n') -> sama tapi per baris
+#str.replace("old","new") -> ganti kata di dalam string (case sensitive)
+
+#--pengecekan string
+#.isupper() -> cek apakah uppercase
+#.islower() -> cek apakah lowercase
+#.isalpha() -> cek apakah semuanya huruf alfabet
+#.isalnum() -> cek apakah semuanya alfanumerik
+#.isdecimal() -> cek apakah semuanya angka
+#.isspace() -> cek apakah hanya whitespace
+#.istitle() -> cek apakah setiap huruf pertama kapital
+
+#--formatting string
+#zfill(5) -> menambah angka 0 hingga panjang yg ditentukan (5)
+"""teks = 'Code'
+tambah_number = teks.zfill(5)
+print(tambah_number) #0Code"""
+
+#rjust(20) -> buat jadi rata kanan sesuai panjang (20)
+"""print('Dicoding'.rjust(20))
+print('Dicoding'.rjust(20, '!'))"""
+
+#ljust(20) -> buat jadi rata kiri sesuai panjang (20)
+#center(10, '-') -> buat string jadi di tengah, tambah whitespace/karakter lain di kanan dan kiri string
+
+#--string literals
+#--escape character
+#str = 'jum\'at'
+#\' single quote
+#\" double quote
+#\t tab
+#\n newline
+#\\ backslash
+
+#--raw string -> print seadanya
+#print(r'Dicoding\tindonesia')
+
+
+#----operasi pada list,set, dan string
+#--len -> menghitung panjang / jumlah pada list, set, dan string
+#contoh:
+"""listku = [1,2,4,5,3,7,5,9,7]
+print(len(listku))"""
+
+#--min / max 
+"""listku = [1,5,12,17,20,30,44]
+print(min(listku))
+print(max(listku))"""
+
+#--count -> menghitung sudah muncul berapa kali
+"""genap = [2,4,4,6,6,6,6,8,8,8,10]
+print(genap.count(6))
+
+kalimat = "Belajar python itu menyenangkan ya gaes yak"
+potong = "a"
+print(kalimat.count(potong))
+"""
+
+#--in dan not in
+"""kalimat = "Belajar python itu menyenangkan ya gaes yak"
+print('Belajar' in kalimat) #apakah kata "Belajar" ada di kalimat -> true
+print('Meltryllis' in kalimat) #apakah kata "Meltryllis" ada di kalimat -> false
+print('Belajar' not in kalimat) #apakah kata "Belajar" tidak ada di kalimat -> false
+print('Meltryllis' not in kalimat) #apakah kata "Meltryllis" tidak ada di kalimat -> true
+"""
+
+#--destructuring (memberikan nilai pada beberapa variabel)
+"""data = ["hoodie", "biru", "M"]
+jenis, warna, ukuran = data #jumlah variabel harus sama dengan panjang list
+print(data, jenis, warna, ukuran)"""
+
+#--sort
+#sort tidak dapat mengurutkan list yang ada string & angka
+#sort mengurutkan sesuai ASCII -> kapital dulu baru lowercase => Pesawat > motor
+"""kendaraan = ["motor", "mobil", "Helikopter", "pesawat"]
+kendaraan.sort() #disort secara asc sesuai huruf pertama
+kendaraan.sort(reverse=True) #disort secara desc
+print(kendaraan)"""
+
+
+#----ekspresi
+#result = 1+2 -> contoh ekspresi umum
+"""angka = [2,4,6,8]
+huruf = ['P','Y','T','H','O','N']
+hasil = angka+huruf
+print(hasil)
+
+learn = ['P','Y','T','H','O','N']
+replikasi = learn * 2
+print(replikasi)"""
+
+#--biner -> yg biasanya +,-,*,:,>,<,!
+#--uner
+"""a = True
+a = not a
+print(a)
+
+b = 5
+b += 1
+print(b)
+
+c = 8
+c -= 1
+print(c)
+
+d = 10
+print(-d)"""
+
+#--operator
+#+, -, *, //(pembagian bulat), /(pembagian ril), %, **(pangkat)
+
+#--operator relasional
+#== sama dengan
+#!= tidak sama dengan
+#> >= < <=
+
+#--operator logika
+# AND &
+# OR |
+# NOT
+
+#--operator assignment
+# +=, -=. *=, %=, /=
+
+
 #note : ctrl+k+s (set shortcut custom) -> run python file -> shift+` (29/09/2023) 
