@@ -21,7 +21,7 @@ mungkin saja iya"""
 print(tes)
 '''
 
-#print input
+#----print input
 #name = "axel" #input("Masukkan nama anda : ")
 
 #print(f"Nama saya adalah, {name}") #formatted string
@@ -242,5 +242,103 @@ print(-d)"""
 #--operator assignment
 # +=, -=. *=, %=, /=
 
+#----oneliner (kode 1 baris)
+#tukar variabel
+"""x = 1
+y = 2
+x, y = y, x
+print(x, y)"""
 
-#note : ctrl+k+s (set shortcut custom) -> run python file -> shift+` (29/09/2023) 
+#----if else
+#--if & else
+"""score = 100
+if score == 100: #setelah if pake :
+    print("Nilai yang sempurna") #indentasi penting untuk tau awal dan akhir block code
+else:
+    print("Nilai yang jelek :(")"""
+#if score == 100: print("Nilai yang sempurna")
+#python menganggap nilai 0 dan null false seperti javascript jadi ada value truthy dan non truthy
+
+#--elif (else if)
+"""nilai = 67
+
+if nilai>=80:
+    print("A")
+elif nilai>=70:
+    print("B")
+elif nilai>=60:
+    print("C")
+else:
+    print("D")"""
+
+#--ternary operator
+"""status = True
+print("Selamat anda lulus") if status else print("Hiyaaa goblok amat jadi orang")"""
+
+#----loopipng
+#--for
+#for <var> in <iterable>: <statement(s)>
+#iterable -> yang bisa di buat loop seperti list, set, string
+"""for i in range(10): #range(start,stop(eksklusif),step) #eksklusif -> nilai terakhir ga masuk
+    print(i) #0-9 karena range mulai dari 0"""
+
+#--while
+"""counter = 1
+while counter<=5:
+    print(counter)
+    counter+=1
+"""
+
+#--nested for
+"""for i in range(1,3):
+    for j in range(1,3):
+        print(i,j)"""
+
+#--break & continue
+"""for i in range(1,3):
+    for j in range(1,10):
+        print(j)
+        if j==4:
+            continue #break"""
+
+#--else setelah for
+"""numbers = [1,2,3,4,5]
+
+for num in numbers:
+    if num==4:
+        print("Angka telah ditemukan")
+        break
+else:
+    print("Angka tidak ditemukan")"""
+#if dan else berkaitan meskipun beda block, jika if jalan maka else ga jalan
+
+#--else setelah while
+"""count = 0
+
+while count < 3:
+    print("Meltryllis")
+    count += 1
+else: #bakal jalan kalo while false -> jadi kalau di break (while masih true) gajalan
+    print("cantik")"""
+
+#--pass
+"""x = 10
+
+if x > 5:
+    pass #pass -> ga ngapa ngapain / skip
+else:
+    print("Nilai x tidak memenuhi kondisi")"""
+
+#--list comprehension
+#cara lama
+"""angka = [1,2,3,4]
+pangkat = []
+
+for n in angka:
+    pangkat.append(n**2)
+
+print(pangkat)
+#cara baru
+#new_list = [expression for_loop_one_or_more_conditions]
+pangkat = [n**2 for n in angka]
+print(pangkat)"""
