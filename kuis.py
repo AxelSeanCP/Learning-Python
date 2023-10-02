@@ -11,7 +11,7 @@ Tips:
 - Gunakan percabangan dan perulangan untuk mempermudah, 
   Anda tidak diperbolehkan memberikan nilai secara langsung.
 """
-# Jangan ubah kode ini
+"""# Jangan ubah kode ini
 var_array = [i for i in range(101)]
 
 # TODO: Silakan buat kode Anda di bawah ini.
@@ -20,4 +20,4 @@ for angka in var_array:
     result += angka 
 
 result /= len(var_array)
-print(result)
+print(result)"""
