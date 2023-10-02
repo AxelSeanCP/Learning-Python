@@ -342,3 +342,62 @@ print(pangkat)
 #new_list = [expression for_loop_one_or_more_conditions]
 pangkat = [n**2 for n in angka]
 print(pangkat)"""
+
+#--try except
+"""z=0
+try:
+    print(1/z)
+except ZeroDivisionError:
+    print("Anda tidak bisa membagi dengan angka 0")"""
+
+"""var_dict = {"rata_rata": "1.0"}
+
+try:
+    print(f"rata-rata adalah {var_dict['rata_rata']}")
+except KeyError:
+    print("Key tidak ditemukan.")
+except TypeError:
+    print("Anda tidak bisa membagi nilai dengan tipe data string")
+else:
+    print("Kode ini dieksekusi jika tidak ada exception.")
+finally:
+    print("Kode ini dieksekusi terlepas dari ada atau tidaknya exception.")"""
+
+#--raise exception
+"""var = -1
+if var < 0:
+    raise ValueError("Bilangan negatif ga boleh")
+else:
+    for i in range(var):
+        print(i+1)"""
+
+#----array
+#--nilai default
+#myList = [0 for i in range(10)] #deklarasi array panjang 10 semua isinya 0
+
+#--sequence di array
+"""var_arr = [1, 2, 3, 4, 5]
+
+for i in range(len(var_arr)):
+    current_element = var_arr[i]
+    next_index = i+1 #indeks suksesor
+    
+    if next_index < len(var_arr):
+        next_element = var_arr[next_index]
+    else:
+        next_element = None
+        
+    print(f"Current element: {current_element}, next elements: {next_element}")"""
+
+#latihan cari nilai terbesar di array
+"""myList = [1,7,2,89,3]
+
+leftPointer = myList[0]
+
+for i in range(1, len(myList)):
+    rightPointer = myList[i]
+
+    if rightPointer > leftPointer:
+        leftPointer = rightPointer
+
+print(leftPointer)"""
