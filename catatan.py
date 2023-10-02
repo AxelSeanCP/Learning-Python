@@ -401,3 +401,84 @@ for i in range(1, len(myList)):
         leftPointer = rightPointer
 
 print(leftPointer)"""
+
+#----matriks
+"""import numpy #library python biasa buat bikin array
+matriks = numpy.array([[1,2,3],[4,5,6],[7,8,9]])
+print(matriks)"""
+
+#--deklarasi biasa
+#matriks bersifat homogen(cuma 1 jenis int atau float dst)
+#matriks = [[1,2,3],[4,5,6],[7,8,9]]
+
+#--deklarasi default
+"""matriks = [[0 for j in range(3)] for i in range(3)]
+print(matriks)"""
+
+#--akses elemen matriks
+#matriks[indexkolom][indexbaris]
+
+#--operasi pada matriks (kali konstanta)
+#cara biasa
+"""matriks = [[5,0],[1,-2]]
+
+hasil = [[0 for j in range(len(matriks[i]))] for i in range(len(matriks))]
+
+for i in range(len(matriks)):
+    for j in range(len(matriks[0])):
+        hasil[i][j] = matriks[i][j] * 2
+
+print(hasil)"""
+#cara numpy
+"""import numpy as np
+matriks = np.array([[5,0],[1,-2]])
+
+print(matriks*2)"""
+
+#----function
+"""def luasPersegi(panjang, lebar): #(panjang, lebar) merupakan parameter
+    '''ini namanya docstring (documentation string)
+    Fungsi ini dibuat untuk menghitung luas persegi panjang
+
+    Args: 
+        Panjang(int): panjang persegi panjang
+        lebar(int): lebar persegi panjang
+    Returns:
+        int: Luas persegi panjang hasil perhitungan'''
+    
+
+    luas = panjang * lebar
+    return luas
+
+persegiPertama = luasPersegi(2,4) #(2,4) merupakan argumen
+print(persegiPertama)
+
+luasPersegi(panjang=2, lebar=4) #keyword argumen, yg tadi positional
+def penjumlahan(a,b, /): #positional only parameter
+def greeting(*, nama, pesan): #keyword only parameter
+def hitung_total(*args): #var positional parameter, semua jadi tuple
+def cetak_info(**kwargs): #var keyword parameter, semua jadi dictionary"""
+
+#--lambda expression
+#func = lambda args: ret_val
+"""luasPersegi = lambda panjang, lebar: panjang*lebar
+print(luasPersegi(2,2))"""
+
+#--scope
+#global
+"""a=10
+def hitung(b):
+    return a+b
+print(hitung(5))"""
+#lokal
+"""def hitung(b):
+    a=10
+    return a+b
+print(hitung(5))"""
+
+#----panggil modul
+import hello
+#from hello import mencari_luas_persegi_panjang, nama #ga perlu pake hello.
+persegiPanjang = hello.mencari_luas_persegi_panjang(5,10)
+print(persegiPanjang)
+print(hello.nama)
