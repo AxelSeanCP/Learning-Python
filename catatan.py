@@ -587,7 +587,7 @@ r34.tambahKecepatan()
 print(r34.kecepatan)"""
 
 #--super
-class Mobil:
+"""class Mobil:
     def __init__(self, warna, merek, kecepatan): #self === this di javascript
         self.warna = warna
         self.merek = merek
@@ -608,4 +608,10 @@ class MobilSport(Mobil): #inheritance dengan memasukkan class parent ke paramete
 r34 = MobilSport("Hitam","Nissan", 160)
 print(r34.kecepatan)
 r34.tambahKecepatan()
-print(r34.kecepatan)
+print(r34.kecepatan)"""
+
+#----python style guide
+#di terminal install pycodestyle -> pip install pycodestyle => pycodestyle kalkulator.py (buat cek ada error)
+#di terminal install black -> pip install black => black kalkulator.py (buat format kode)
+
+#install anaconda -> https://www.anaconda.com/download.
