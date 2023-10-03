@@ -477,8 +477,135 @@ print(hitung(5))"""
 print(hitung(5))"""
 
 #----panggil modul
-import hello
+"""import hello
 #from hello import mencari_luas_persegi_panjang, nama #ga perlu pake hello.
 persegiPanjang = hello.mencari_luas_persegi_panjang(5,10)
 print(persegiPanjang)
-print(hello.nama)
+print(hello.nama)"""
+
+#----procedure
+"""def greeting():
+    print("Hello World")
+
+greeting()"""
+
+#----Object Oriented Programming(oop)
+"""class  Mobil:
+    #atribut
+    warna = "Merah"
+
+bmwM3 = Mobil()
+bmwM3.warna = "hitam"
+print(bmwM3.warna)"""
+
+#mengubah atribut kelas
+"""class Mobil:
+    warna = "Merah"
+mobil1 = Mobil()
+mobil2 = Mobil()
+print(mobil1.warna, mobil2.warna)
+#mobil1.warna = "Hitam" #ganti yang aman
+Mobil.warna = "Hitam" #ketika ganti warna lewat kelasnya langsung, maka semua keganti
+print(mobil1.warna, mobil2.warna)"""
+
+#--constructor
+"""class Mobil:
+    #constructor
+    def __init__(self, warna, merek, tipe): #self === this di javascript
+        self.warna = warna
+        self.merek = merek
+        self.tipe = tipe
+
+bmwM4 = Mobil("Biru", "BMW", "Sport")
+print(bmwM4.tipe)"""
+
+#decorator -> cari sendiri di google, intinya buat nambahin fungsi sebelum dan sesudah sebuah fungsi dijalankan
+#--method
+"""class Mobil:
+    #constructor
+    def __init__(self, warna, merek, kecepatan): #self === this di javascript
+        self.warna = warna
+        self.merek = merek
+        self.kecepatan = kecepatan
+    
+    def tambahKecepatan(self):
+        self.kecepatan += 10
+
+bmwM4 = Mobil("Biru", "BMW", 140)
+print(bmwM4.kecepatan)
+bmwM4.tambahKecepatan()
+print(bmwM4.kecepatan)
+#Mobil.tambahKecepatan() #error karena methodnya punya objek"""
+
+#--static method & class method
+"""class Mobil:
+    def __init__(self, merek):
+        self.merek = merek
+    
+    #static method
+    @staticmethod
+    def introMobil():
+        print("Ini adalah static method dari kelas Mobil")
+    
+    #class method, otomatis menambahkan kelas sebagai atribut pertama
+    @classmethod
+    def introMobil2(cls):
+        print("Ini adalah class method dari kelas Mobil")
+    
+Mobil.introMobil()
+Mobil.introMobil2()
+mobil1 = Mobil("BMW")
+mobil1.introMobil()
+mobil1.introMobil2()"""
+
+#----inheritance
+"""class Mobil:
+    def __init__(self, warna, merek, kecepatan): #self === this di javascript
+        self.warna = warna
+        self.merek = merek
+        self.kecepatan = kecepatan
+    
+    def tambahKecepatan(self):
+        self.kecepatan += 10
+
+class MobilSport(Mobil): #inheritance dengan memasukkan class parent ke parameter
+    def turbo(self):
+        self.kecepatan += 50
+    
+    def tambahKecepatan(self): #overriding
+        self.kecepatan += 20
+
+#kelas mobil dasar
+kijangInova = Mobil("Biru", "Toyota", 140)
+print(kijangInova.kecepatan)
+
+#kelas mobil sport
+r34 = MobilSport("Hitam","Nissan", 160)
+print(r34.kecepatan)
+r34.turbo()
+r34.tambahKecepatan()
+print(r34.kecepatan)"""
+
+#--super
+class Mobil:
+    def __init__(self, warna, merek, kecepatan): #self === this di javascript
+        self.warna = warna
+        self.merek = merek
+        self.kecepatan = kecepatan
+    
+    def tambahKecepatan(self):
+        self.kecepatan += 10
+
+class MobilSport(Mobil): #inheritance dengan memasukkan class parent ke parameter
+    def turbo(self):
+        self.kecepatan += 50
+    
+    def tambahKecepatan(self): #overriding
+        super().tambahKecepatan()
+        print("Kecepatan anda meningkat, Hati hati")
+
+#kelas mobil sport
+r34 = MobilSport("Hitam","Nissan", 160)
+print(r34.kecepatan)
+r34.tambahKecepatan()
+print(r34.kecepatan)
