@@ -610,6 +610,12 @@ print(r34.kecepatan)
 r34.tambahKecepatan()
 print(r34.kecepatan)"""
 
+#----python style guide
+#di terminal install pycodestyle -> pip install pycodestyle => pycodestyle kalkulator.py (buat cek ada error)
+#di terminal install black -> pip install black => black kalkulator.py (buat format kode)
+
+#install anaconda -> https://www.anaconda.com/download.
+
 #----library text processing
 #--regex
 """import re #import modul regex
