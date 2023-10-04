@@ -587,7 +587,7 @@ r34.tambahKecepatan()
 print(r34.kecepatan)"""
 
 #--super
-class Mobil:
+"""class Mobil:
     def __init__(self, warna, merek, kecepatan): #self === this di javascript
         self.warna = warna
         self.merek = merek
@@ -608,4 +608,172 @@ class MobilSport(Mobil): #inheritance dengan memasukkan class parent ke paramete
 r34 = MobilSport("Hitam","Nissan", 160)
 print(r34.kecepatan)
 r34.tambahKecepatan()
-print(r34.kecepatan)
+print(r34.kecepatan)"""
+
+#----library text processing
+#--regex
+"""import re #import modul regex
+
+pola = "^a...s$" #^mulai dengan, . karakter apapun, $ diakhiri dengan
+string_tes = "abyss"
+hasil = re.match(pola, string_tes) #return true or false
+
+if hasil:
+    print("Pencarian berhasil")
+else:
+    print("Pencarian gagal")"""
+
+#----library matematika
+#--math
+"""import math
+
+print(math.sqrt(25)) #square root
+print(math.pi)"""
+
+#----library parser
+#--parser
+#argumen opsional
+"""import argparse
+ 
+parser = argparse.ArgumentParser()
+parser.add_argument('-o', '--output', action='store_true', help="tampilkan output")
+args = parser.parse_args()
+ 
+if args.output:
+   print("Halo, ini merupakan sebuah output dari panggildicoding.py")"""
+
+#run pakai ini
+#& C:/Users/VICTUS/AppData/Local/Programs/Python/Python311/python.exe d:/Self-Learning/Learning-Python/catatan.py -o
+
+#argumen wajib
+"""import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-n','--nama', required=True, help='Masukkan Nama Anda')
+parser.add_argument('-t','--tanggallahir', required=True, help='Masukkan Tanggal Lahir Anda (DD-MM-YYYY)')
+args = parser.parse_args()
+
+tahun_str = args.tanggallahir[6:]
+tahun = int(tahun_str)
+umur = 2023 - tahun
+
+print("Terimakasih telah menggunakan catatan.py pada tahun 2023,","kakak " + args.nama if umur < 30 else "bapak " + args.nama )"""
+#run pakai ini
+#& C:/Users/VICTUS/AppData/Local/Programs/Python/Python311/python.exe d:/Self-Learning/Learning-Python/catatan.py -n Axel -t 11-06-2003
+
+#----library pengolahan data
+#--pandas (pengelolaan dan analisis data) pip install pandas
+"""import pandas as pd
+
+#membuat dataframe dari dictionary
+data = {
+    'Nama': ['John', 'Jane', 'Bob', 'Alice'],
+    'Usia': [25, 30, 22 ,28],
+    'Pekerjaan': ['Engineer', 'Teacher', 'Designer', 'Doctor']
+}
+
+df = pd.DataFrame(data)
+
+#menampilkan dataframe
+print(df) #mirip spreadsheet
+"""
+
+#--numpy pip install numpy
+"""import numpy
+
+matriks = numpy.array([[1, 2, 3], [4, 5, 6], [7, 8 ,9]])
+print(matriks)"""
+
+#--Matplotlib (visualisasi data) python -m pip install -U matplotlib
+"""import matplotlib.pyplot as plt
+
+#data
+x = [1,2,3,4,5]
+y = [2,4,6,8,10]
+
+#membuat plot garis
+plt.plot(x, y)
+
+#menambahkan judul dan label sumbu
+plt.title("Contoh Plot Garis")
+plt.xlabel("Sumbu X")
+plt.ylabel("Sumbu Y")
+
+#menampilkan plot
+plt.show()"""
+
+#----library File Management
+#--os (fungsi yg berkaitan dengan sistem operasi)
+"""import os
+print(os.getcwd())"""
+'''Fungsi ini akan mengembalikan string representasi dari Current Working Directory, 
+yaitu direktori tempat program Python kita berada. 
+Fungsi ini berlaku pada semua OS.'''
+
+#--json
+"""import json
+# contoh JSON:
+x = '{ "nama":"Buchori", "umur":22, "Kota":"New York"}'
+ 
+# parse  x:
+y = json.loads(x)
+ 
+print(y["umur"])"""
+
+#--pickle
+#simpan ke file
+"""import pickle
+contoh_dictionary = {1:"6", 2:"2", 3:"f"}
+pickle_keluar = open("dict.pickle","wb")
+pickle.dump(contoh_dictionary, pickle_keluar)
+pickle_keluar.close()"""
+
+#ekstrak ke variabel
+"""import pickle
+pickle_masuk = open("dict.pickle", "rb")
+contohDictionary = pickle.load(pickle_masuk)
+pickle_masuk.close()
+ 
+print(contohDictionary)"""
+
+#----library web scraping
+#--beautifulsoup (ambil data web + ekstrak) pip install beautifulsoup4
+"""from urllib.request import urlopen
+from bs4 import BeautifulSoup
+ 
+# Pengambilan konten
+url = "http://python.org/"
+page = urlopen(url)
+html = page.read().decode("utf-8")
+ 
+# Membuat objek BeautifulSoup
+soup = BeautifulSoup(html, "html.parser")
+ 
+# Mencetak judul halaman
+print(soup.title)"""
+
+#--urllib (mirip beautiful soup)
+"""from urllib.request import urlopen
+ 
+# Pengambilan konten
+url = "http://python.org/"
+page = urlopen(url)
+html = page.read().decode("utf-8")
+ 
+# Mencari indeks awal dan akhir
+start_index = html.find("<title>") + len("<title>")
+end_index = html.find("</title>")
+ 
+# Mengekstrak dan mencetak judul halaman
+title = html[start_index:end_index]
+print(title)"""
+
+#----library machine learning
+#--scikit-learn pip install -U scikit-learn
+#--TensorFlow pip install tensorflow
+#--PyTorch pip install torch torchvision torchaudio
+
+#----library web development (server side)
+#--django py -m pip install Django
+#--flask pip install Flask
+#--fast API pip install fastapi
